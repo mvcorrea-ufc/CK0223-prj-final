@@ -5,10 +5,7 @@ This project focuses on the initial steps of a data mining pipeline: data cleani
 ## Project Structure
 
 - `prj_files/`: Contains project-related files, including the original and processed datasets.
-- `prj_part01/`: Contains the Python scripts developed for this part of the project.
-  - `load_data.py`: A module to load the raw dataset into a pandas DataFrame.
-  - `process_data.py`: The main script that performs all the data processing tasks as required by the assignment.
-  - `CKP9011_CK0223_IntroducaoCienciadeDados_2025_Lista_1.md`: A Markdown version of the assignment instructions.
+- `prj_part01/`: Contains the Python scripts developed for this part of the project. See the [README in this directory](./prj_part01/README.md) for detailed information about each script.
 - `requirements.txt`: A list of Python dependencies for this project.
 - `.gitignore`: Specifies files and directories to be ignored by Git.
 
