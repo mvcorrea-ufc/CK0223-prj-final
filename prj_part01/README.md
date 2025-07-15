@@ -1,6 +1,6 @@
 # Project Part 1: Data Processing and Feature Engineering
 
-This directory contains the scripts for the first part of the data mining project, which corresponds to the tasks outlined in "Lista 1". The focus is on data ingestion, cleaning, and the creation of new features from the raw dataset.
+This directory contains the scripts for the first part of the data mining project, which corresponds to the tasks outlined in the project statement: [Lista 1](CKP9011_CK0223_IntroducaoCienciadeDados_2025_Lista_1.md). The focus is on data ingestion, cleaning, and the creation of new features from the raw dataset.
 
 ## Scripts
 
