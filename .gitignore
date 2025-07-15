@@ -1,0 +1,29 @@
+# Virtual Environment
+.venv/
+venv/
+*.venv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Data files
+prj_files/*.csv
+prj_files/*.zip
+
+# IDE and OS specific
+.DS_Store
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Project assets and documents
+prj_files/Livros/
+prj_files/Plano_de_Aulas/
+prj_files/Slides/
+prj_files/Trabalhos/
