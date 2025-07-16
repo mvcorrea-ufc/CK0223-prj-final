@@ -1,0 +1,10 @@
+services:
+  dev-container:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "2222:22"
+    volumes:
+      - .:/home/dev/app:cached
+    restart: unless-stopped

@@ -1,0 +1,902 @@
+DEBUG uv 0.7.8 (0ddcc1905 2025-05-23)
+DEBUG Searching for default Python interpreter in virtual environments
+TRACE Cached interpreter info for Python 3.12.9, skipping probing: .venv/bin/python3
+DEBUG Found `cpython-3.12.9-macos-x86_64-none` at `/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/bin/python3` (active virtual environment)
+DEBUG Using Python 3.12.9 environment at: .venv
+TRACE Checking lock for `.venv` at `.venv/.lock`
+DEBUG Acquired lock for `.venv`
+DEBUG At least one requirement is not satisfied: pyarrow==16.0.0
+DEBUG Using request timeout of 30s
+DEBUG Solving with installed Python version: 3.12.9
+DEBUG Solving with target Python version: >=3.12.9
+TRACE Assigned packages: 
+TRACE Chose package for decision: root. remaining choices: 
+DEBUG Adding direct dependency: pandas*
+DEBUG Adding direct dependency: gdown*
+DEBUG Adding direct dependency: duckdb*
+DEBUG Adding direct dependency: pyarrow>=16.0.0, <16.0.0+
+TRACE Fetching metadata for pandas from https://pypi.org/simple/pandas/
+TRACE Assigned packages: root==0a0.dev0
+TRACE Chose package for decision: pyarrow. remaining choices: pandas, gdown, duckdb
+TRACE Fetching metadata for gdown from https://pypi.org/simple/gdown/
+TRACE Fetching metadata for duckdb from https://pypi.org/simple/duckdb/
+TRACE Fetching metadata for pyarrow from https://pypi.org/simple/pyarrow/
+TRACE Cached request https://pypi.org/simple/gdown/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+DEBUG Found fresh response for: https://pypi.org/simple/gdown/
+TRACE Received package metadata for: gdown
+DEBUG Found installed version of gdown==5.2.0 that satisfies *
+TRACE Using installed gdown 5.2.0 that satisfies *
+TRACE Received installed distribution metadata for: gdown==5.2.0
+TRACE Cached request https://pypi.org/simple/pandas/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+DEBUG Found fresh response for: https://pypi.org/simple/pandas/
+TRACE Received package metadata for: pandas
+DEBUG Found installed version of pandas==2.3.1 that satisfies *
+TRACE Using installed pandas 2.3.1 that satisfies *
+TRACE Received installed distribution metadata for: pandas==2.3.1
+TRACE Cached request https://pypi.org/simple/duckdb/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+DEBUG Found fresh response for: https://pypi.org/simple/duckdb/
+TRACE Received package metadata for: duckdb
+TRACE Cached request https://pypi.org/simple/pyarrow/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+DEBUG Found fresh response for: https://pypi.org/simple/pyarrow/
+TRACE Received package metadata for: pyarrow
+TRACE Selecting candidate for duckdb with range * with 60 remote versions
+DEBUG Searching for a compatible version of pyarrow (>=16.0.0, <16.0.0+)
+TRACE Selecting candidate for pyarrow with range >=16.0.0, <16.0.0+ with 57 remote versions
+TRACE Found candidate for package duckdb with range * after 7 steps: 1.3.2 version
+TRACE Returning candidate for package duckdb with range * after 7 steps
+TRACE Found candidate for package pyarrow with range >=16.0.0, <16.0.0+ after 1 steps: 16.0.0 version
+TRACE Returning candidate for package pyarrow with range >=16.0.0, <16.0.0+ after 1 steps
+DEBUG Selecting: pyarrow==16.0.0 [compatible] (pyarrow-16.0.0-cp312-cp312-macosx_10_15_x86_64.whl)
+TRACE Selecting candidate for pyarrow with range >=16.0.0, <16.0.0+ with 57 remote versions
+TRACE Found candidate for package pyarrow with range >=16.0.0, <16.0.0+ after 1 steps: 16.0.0 version
+TRACE Returning candidate for package pyarrow with range >=16.0.0, <16.0.0+ after 1 steps
+TRACE Cached request https://files.pythonhosted.org/packages/6c/5d/77f15528857c2b186ebec07778dc199ccc04aafb69fb7b15227af4f19ac9/duckdb-1.3.2-cp312-cp312-macosx_12_0_arm64.whl.metadata is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 365000000s
+DEBUG Found fresh response for: https://files.pythonhosted.org/packages/6c/5d/77f15528857c2b186ebec07778dc199ccc04aafb69fb7b15227af4f19ac9/duckdb-1.3.2-cp312-cp312-macosx_12_0_arm64.whl.metadata
+TRACE Received built distribution metadata for: duckdb==1.3.2
+TRACE Cached request https://files.pythonhosted.org/packages/0f/64/7a94bec6658873c7d82f743a92653bcc961eda95480827bd46d2d33003be/pyarrow-16.0.0-cp312-cp312-macosx_10_15_x86_64.whl.metadata is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 365000000s
+DEBUG Found fresh response for: https://files.pythonhosted.org/packages/0f/64/7a94bec6658873c7d82f743a92653bcc961eda95480827bd46d2d33003be/pyarrow-16.0.0-cp312-cp312-macosx_10_15_x86_64.whl.metadata
+TRACE Received built distribution metadata for: pyarrow==16.0.0
+DEBUG Adding transitive dependency for pyarrow==16.0.0: numpy>=1.16.6
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0
+TRACE Fetching metadata for numpy from https://pypi.org/simple/numpy/
+TRACE Chose package for decision: pandas. remaining choices: numpy, gdown, duckdb
+DEBUG Searching for a compatible version of pandas (*)
+DEBUG Found installed version of pandas==2.3.1 that satisfies *
+TRACE Using installed pandas 2.3.1 that satisfies *
+DEBUG Selecting: pandas==2.3.1 [installed] (installed)
+DEBUG Adding transitive dependency for pandas==2.3.1: numpy{python_full_version >= '3.12'}>=1.26.0
+DEBUG Adding transitive dependency for pandas==2.3.1: python-dateutil>=2.8.2
+DEBUG Adding transitive dependency for pandas==2.3.1: pytz>=2020.1
+DEBUG Adding transitive dependency for pandas==2.3.1: tzdata>=2022.7
+TRACE Fetching metadata for python-dateutil from https://pypi.org/simple/python-dateutil/
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1
+TRACE Chose package for decision: gdown. remaining choices: numpy, tzdata, duckdb, python-dateutil, pytz
+DEBUG Searching for a compatible version of gdown (*)
+DEBUG Found installed version of gdown==5.2.0 that satisfies *
+TRACE Using installed gdown 5.2.0 that satisfies *
+DEBUG Selecting: gdown==5.2.0 [installed] (installed)
+TRACE Fetching metadata for pytz from https://pypi.org/simple/pytz/
+DEBUG Adding transitive dependency for gdown==5.2.0: beautifulsoup4*
+DEBUG Adding transitive dependency for gdown==5.2.0: filelock*
+TRACE Fetching metadata for tzdata from https://pypi.org/simple/tzdata/
+DEBUG Adding transitive dependency for gdown==5.2.0: requests[socks]*
+DEBUG Adding transitive dependency for gdown==5.2.0: tqdm*
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0
+TRACE Fetching metadata for beautifulsoup4 from https://pypi.org/simple/beautifulsoup4/
+TRACE Chose package for decision: duckdb. remaining choices: numpy, tzdata, tqdm, python-dateutil, pytz, beautifulsoup4, filelock
+DEBUG Searching for a compatible version of duckdb (*)
+TRACE Fetching metadata for filelock from https://pypi.org/simple/filelock/
+TRACE Selecting candidate for duckdb with range * with 60 remote versions
+TRACE Found candidate for package duckdb with range * after 7 steps: 1.3.2 version
+TRACE Returning candidate for package duckdb with range * after 7 steps
+DEBUG Selecting: duckdb==1.3.2 [compatible] (duckdb-1.3.2.tar.gz)
+TRACE Fetching metadata for requests from https://pypi.org/simple/requests/
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2
+TRACE Chose package for decision: numpy. remaining choices: tzdata, tqdm, python-dateutil, pytz, beautifulsoup4, filelock
+TRACE Fetching metadata for tqdm from https://pypi.org/simple/tqdm/
+TRACE Cached request https://pypi.org/simple/python-dateutil/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/python-dateutil/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/python-dateutil/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/python-dateutil/
+DEBUG Sending revalidation request for: https://pypi.org/simple/python-dateutil/
+TRACE Handling request for https://pypi.org/simple/python-dateutil/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/python-dateutil/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/python-dateutil/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/python-dateutil/
+TRACE Cached request https://pypi.org/simple/pytz/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/pytz/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/pytz/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/pytz/
+DEBUG Sending revalidation request for: https://pypi.org/simple/pytz/
+TRACE Handling request for https://pypi.org/simple/pytz/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/pytz/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/pytz/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/pytz/
+TRACE Cached request https://pypi.org/simple/beautifulsoup4/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/beautifulsoup4/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/beautifulsoup4/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/beautifulsoup4/
+DEBUG Sending revalidation request for: https://pypi.org/simple/beautifulsoup4/
+TRACE Handling request for https://pypi.org/simple/beautifulsoup4/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/beautifulsoup4/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/beautifulsoup4/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/beautifulsoup4/
+TRACE Cached request https://pypi.org/simple/tzdata/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/tzdata/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/tzdata/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/tzdata/
+DEBUG Sending revalidation request for: https://pypi.org/simple/tzdata/
+TRACE Handling request for https://pypi.org/simple/tzdata/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/tzdata/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/tzdata/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/tzdata/
+TRACE Cached request https://pypi.org/simple/filelock/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/filelock/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/filelock/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/filelock/
+DEBUG Sending revalidation request for: https://pypi.org/simple/filelock/
+TRACE Handling request for https://pypi.org/simple/filelock/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/filelock/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/filelock/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/filelock/
+TRACE Cached request https://pypi.org/simple/requests/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/requests/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/requests/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/requests/
+DEBUG Sending revalidation request for: https://pypi.org/simple/requests/
+TRACE Handling request for https://pypi.org/simple/requests/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/requests/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/requests/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/requests/
+TRACE Cached request https://pypi.org/simple/tqdm/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/tqdm/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/tqdm/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/tqdm/
+DEBUG Sending revalidation request for: https://pypi.org/simple/tqdm/
+TRACE Handling request for https://pypi.org/simple/tqdm/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/tqdm/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/tqdm/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/tqdm/
+TRACE Cached request https://pypi.org/simple/numpy/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/numpy/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/numpy/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/numpy/
+DEBUG Sending revalidation request for: https://pypi.org/simple/numpy/
+TRACE Handling request for https://pypi.org/simple/numpy/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/numpy/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/numpy/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/numpy/
+TRACE Resource is not modified because old and new etag values ([34, 49, 120, 114, 69, 100, 54, 100, 103, 110, 111, 54, 122, 102, 56, 111, 54, 103, 65, 102, 107, 119, 103, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/tzdata/
+TRACE Resource is not modified because old and new etag values ([34, 79, 75, 107, 120, 78, 107, 80, 115, 85, 120, 111, 104, 52, 78, 73, 102, 70, 97, 112, 79, 102, 103, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/requests/
+TRACE Resource is not modified because old and new etag values ([34, 90, 106, 65, 102, 86, 82, 90, 48, 50, 104, 51, 78, 47, 48, 68, 114, 72, 85, 122, 97, 57, 119, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/pytz/
+TRACE Resource is not modified because old and new etag values ([34, 98, 48, 114, 85, 84, 71, 110, 51, 74, 108, 117, 54, 100, 97, 111, 76, 105, 114, 47, 49, 107, 81, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/filelock/
+TRACE Resource is not modified because old and new etag values ([34, 53, 74, 114, 73, 86, 108, 53, 75, 116, 117, 117, 116, 52, 69, 70, 81, 106, 122, 67, 103, 107, 103, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/python-dateutil/
+TRACE Received package metadata for: tzdata
+TRACE Received package metadata for: requests
+TRACE Received package metadata for: pytz
+DEBUG Found installed version of tzdata==2025.2 that satisfies >=2022.7
+TRACE Using installed tzdata 2025.2 that satisfies >=2022.7
+TRACE Received installed distribution metadata for: tzdata==2025.2
+TRACE Received package metadata for: filelock
+TRACE Received package metadata for: python-dateutil
+DEBUG Found installed version of pytz==2025.2 that satisfies >=2020.1
+TRACE Using installed pytz 2025.2 that satisfies >=2020.1
+TRACE Received installed distribution metadata for: pytz==2025.2
+DEBUG Found installed version of filelock==3.18.0 that satisfies *
+TRACE Using installed filelock 3.18.0 that satisfies *
+TRACE Received installed distribution metadata for: filelock==3.18.0
+DEBUG Found installed version of python-dateutil==2.9.0.post0 that satisfies >=2.8.2
+TRACE Using installed python-dateutil 2.9.0.post0 that satisfies >=2.8.2
+TRACE Received installed distribution metadata for: python-dateutil==2.9.0.post0
+TRACE Resource is not modified because old and new etag values ([34, 51, 72, 89, 82, 76, 100, 43, 68, 52, 117, 90, 103, 69, 102, 82, 86, 65, 84, 103, 80, 108, 65, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/numpy/
+TRACE Resource is not modified because old and new etag values ([34, 57, 101, 52, 43, 68, 72, 120, 81, 75, 80, 110, 55, 119, 88, 67, 77, 75, 85, 50, 118, 76, 65, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/beautifulsoup4/
+TRACE Resource is not modified because old and new etag values ([34, 80, 66, 79, 79, 52, 89, 56, 117, 57, 108, 56, 70, 48, 79, 97, 108, 78, 97, 85, 89, 103, 103, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/tqdm/
+TRACE Received package metadata for: beautifulsoup4
+DEBUG Found installed version of beautifulsoup4==4.13.4 that satisfies *
+TRACE Using installed beautifulsoup4 4.13.4 that satisfies *
+TRACE Received installed distribution metadata for: beautifulsoup4==4.13.4
+TRACE Received package metadata for: tqdm
+DEBUG Found installed version of tqdm==4.67.1 that satisfies *
+TRACE Using installed tqdm 4.67.1 that satisfies *
+TRACE Received installed distribution metadata for: tqdm==4.67.1
+TRACE Received package metadata for: numpy
+DEBUG Found installed version of numpy==2.3.1 that satisfies >=1.16.6
+TRACE Using installed numpy 2.3.1 that satisfies >=1.16.6
+DEBUG Searching for a compatible version of numpy (>=1.16.6)
+DEBUG Found installed version of numpy==2.3.1 that satisfies >=1.16.6
+TRACE Using installed numpy 2.3.1 that satisfies >=1.16.6
+DEBUG Selecting: numpy==2.3.1 [installed] (installed)
+TRACE Received installed distribution metadata for: numpy==2.3.1
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1
+TRACE Chose package for decision: numpy{python_full_version >= '3.12'}. remaining choices: tzdata, tqdm, filelock, python-dateutil, pytz, beautifulsoup4
+DEBUG Searching for a compatible version of numpy{python_full_version >= '3.12'} (>=1.26.0)
+DEBUG Found installed version of numpy==2.3.1 that satisfies >=1.26.0
+TRACE Using installed numpy 2.3.1 that satisfies >=1.26.0
+DEBUG Selecting: numpy==2.3.1 [installed] (installed)
+DEBUG Adding transitive dependency for numpy==2.3.1: numpy==2.3.1
+DEBUG Adding transitive dependency for numpy==2.3.1: numpy{python_full_version >= '3.12'}==2.3.1
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1
+TRACE Chose package for decision: numpy{python_full_version >= '3.12'}. remaining choices: tzdata, tqdm, filelock, python-dateutil, pytz, beautifulsoup4
+DEBUG Searching for a compatible version of numpy{python_full_version >= '3.12'} (==2.3.1)
+DEBUG Found installed version of numpy==2.3.1 that satisfies ==2.3.1
+TRACE Using installed numpy 2.3.1 that satisfies ==2.3.1
+DEBUG Selecting: numpy==2.3.1 [installed] (installed)
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1
+TRACE Chose package for decision: python-dateutil. remaining choices: tzdata, tqdm, filelock, beautifulsoup4, pytz
+DEBUG Searching for a compatible version of python-dateutil (>=2.8.2)
+DEBUG Found installed version of python-dateutil==2.9.0.post0 that satisfies >=2.8.2
+TRACE Using installed python-dateutil 2.9.0.post0 that satisfies >=2.8.2
+DEBUG Selecting: python-dateutil==2.9.0.post0 [installed] (installed)
+DEBUG Adding transitive dependency for python-dateutil==2.9.0.post0: six>=1.5
+TRACE Fetching metadata for six from https://pypi.org/simple/six/
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0
+TRACE Chose package for decision: pytz. remaining choices: tzdata, tqdm, filelock, beautifulsoup4, six
+DEBUG Searching for a compatible version of pytz (>=2020.1)
+DEBUG Found installed version of pytz==2025.2 that satisfies >=2020.1
+TRACE Using installed pytz 2025.2 that satisfies >=2020.1
+DEBUG Selecting: pytz==2025.2 [installed] (installed)
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2
+TRACE Chose package for decision: tzdata. remaining choices: six, tqdm, filelock, beautifulsoup4
+DEBUG Searching for a compatible version of tzdata (>=2022.7)
+DEBUG Found installed version of tzdata==2025.2 that satisfies >=2022.7
+TRACE Using installed tzdata 2025.2 that satisfies >=2022.7
+DEBUG Selecting: tzdata==2025.2 [installed] (installed)
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2
+TRACE Chose package for decision: beautifulsoup4. remaining choices: six, tqdm, filelock
+DEBUG Searching for a compatible version of beautifulsoup4 (*)
+DEBUG Found installed version of beautifulsoup4==4.13.4 that satisfies *
+TRACE Using installed beautifulsoup4 4.13.4 that satisfies *
+DEBUG Selecting: beautifulsoup4==4.13.4 [installed] (installed)
+DEBUG Adding transitive dependency for beautifulsoup4==4.13.4: soupsieve>1.2
+DEBUG Adding transitive dependency for beautifulsoup4==4.13.4: typing-extensions>=4.0.0
+TRACE Fetching metadata for soupsieve from https://pypi.org/simple/soupsieve/
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4
+TRACE Chose package for decision: filelock. remaining choices: six, tqdm, typing-extensions, soupsieve
+DEBUG Searching for a compatible version of filelock (*)
+TRACE Fetching metadata for typing-extensions from https://pypi.org/simple/typing-extensions/
+DEBUG Found installed version of filelock==3.18.0 that satisfies *
+TRACE Cached request https://pypi.org/simple/six/ is storable because its response has a 'public' cache-control directive
+TRACE Using installed filelock 3.18.0 that satisfies *
+DEBUG Selecting: filelock==3.18.0 [installed] (installed)
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/six/ has a cached response that does not allow staleness
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0
+TRACE Request https://pypi.org/simple/six/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+TRACE Chose package for decision: requests[socks]. remaining choices: soupsieve, six, tqdm, typing-extensions
+DEBUG Searching for a compatible version of requests[socks] (*)
+DEBUG Found installed version of requests==2.32.4 that satisfies *
+TRACE Using installed requests 2.32.4 that satisfies *
+DEBUG Selecting: requests==2.32.4 [installed] (installed)
+DEBUG Adding transitive dependency for requests==2.32.4: requests==2.32.4
+DEBUG Found stale response for: https://pypi.org/simple/six/
+DEBUG Sending revalidation request for: https://pypi.org/simple/six/
+DEBUG Adding transitive dependency for requests==2.32.4: requests[socks]==2.32.4
+TRACE Handling request for https://pypi.org/simple/six/ with authentication policy auto
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0
+TRACE Request for https://pypi.org/simple/six/ is unauthenticated, checking cache
+TRACE Chose package for decision: requests. remaining choices: soupsieve, six, tqdm, typing-extensions, requests[socks]
+TRACE No credentials in cache for URL https://pypi.org/simple/six/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/six/
+DEBUG Searching for a compatible version of requests (==2.32.4)
+DEBUG Found installed version of requests==2.32.4 that satisfies ==2.32.4
+TRACE Using installed requests 2.32.4 that satisfies ==2.32.4
+DEBUG Selecting: requests==2.32.4 [installed] (installed)
+TRACE Cached request https://pypi.org/simple/typing-extensions/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+DEBUG Found fresh response for: https://pypi.org/simple/typing-extensions/
+TRACE Received package metadata for: typing-extensions
+TRACE Cached request https://pypi.org/simple/soupsieve/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/soupsieve/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/soupsieve/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/soupsieve/
+DEBUG Sending revalidation request for: https://pypi.org/simple/soupsieve/
+TRACE Handling request for https://pypi.org/simple/soupsieve/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/soupsieve/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/soupsieve/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/soupsieve/
+DEBUG Found installed version of typing-extensions==4.14.1 that satisfies >=4.0.0
+TRACE Using installed typing-extensions 4.14.1 that satisfies >=4.0.0
+TRACE Received installed distribution metadata for: typing-extensions==4.14.1
+DEBUG Found installed version of requests==2.32.4 that satisfies ==2.32.4
+TRACE Using installed requests 2.32.4 that satisfies ==2.32.4
+TRACE Received installed distribution metadata for: requests==2.32.4
+DEBUG Adding transitive dependency for requests==2.32.4: charset-normalizer>=2, <4
+DEBUG Adding transitive dependency for requests==2.32.4: idna>=2.5, <4
+DEBUG Adding transitive dependency for requests==2.32.4: urllib3>=1.21.1, <3
+DEBUG Adding transitive dependency for requests==2.32.4: certifi>=2017.4.17
+TRACE Fetching metadata for charset-normalizer from https://pypi.org/simple/charset-normalizer/
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0, requests==2.32.4
+TRACE Chose package for decision: requests[socks]. remaining choices: soupsieve, six, tqdm, typing-extensions, certifi, charset-normalizer, idna, urllib3
+DEBUG Searching for a compatible version of requests[socks] (==2.32.4)
+TRACE Fetching metadata for idna from https://pypi.org/simple/idna/
+DEBUG Found installed version of requests==2.32.4 that satisfies ==2.32.4
+TRACE Using installed requests 2.32.4 that satisfies ==2.32.4
+DEBUG Selecting: requests==2.32.4 [installed] (installed)
+TRACE Fetching metadata for urllib3 from https://pypi.org/simple/urllib3/
+DEBUG Adding transitive dependency for requests==2.32.4: pysocks>=1.5.6, <1.5.7 | >=1.5.7+
+TRACE Fetching metadata for certifi from https://pypi.org/simple/certifi/
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0, requests==2.32.4, requests[socks]==2.32.4
+TRACE Fetching metadata for pysocks from https://pypi.org/simple/pysocks/
+TRACE Chose package for decision: tqdm. remaining choices: soupsieve, six, pysocks, typing-extensions, certifi, charset-normalizer, idna, urllib3
+DEBUG Searching for a compatible version of tqdm (*)
+DEBUG Found installed version of tqdm==4.67.1 that satisfies *
+TRACE Using installed tqdm 4.67.1 that satisfies *
+DEBUG Selecting: tqdm==4.67.1 [installed] (installed)
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0, requests==2.32.4, requests[socks]==2.32.4, tqdm==4.67.1
+TRACE Chose package for decision: six. remaining choices: soupsieve, urllib3, pysocks, typing-extensions, certifi, charset-normalizer, idna
+TRACE Cached request https://pypi.org/simple/idna/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/idna/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/idna/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/idna/
+DEBUG Sending revalidation request for: https://pypi.org/simple/idna/
+TRACE Handling request for https://pypi.org/simple/idna/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/idna/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/idna/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/idna/
+TRACE Cached request https://pypi.org/simple/pysocks/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/pysocks/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/pysocks/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/pysocks/
+DEBUG Sending revalidation request for: https://pypi.org/simple/pysocks/
+TRACE Handling request for https://pypi.org/simple/pysocks/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/pysocks/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/pysocks/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/pysocks/
+TRACE Cached request https://pypi.org/simple/certifi/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/certifi/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/certifi/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/certifi/
+DEBUG Sending revalidation request for: https://pypi.org/simple/certifi/
+TRACE Handling request for https://pypi.org/simple/certifi/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/certifi/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/certifi/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/certifi/
+TRACE Cached request https://pypi.org/simple/urllib3/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/urllib3/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/urllib3/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/urllib3/
+DEBUG Sending revalidation request for: https://pypi.org/simple/urllib3/
+TRACE Handling request for https://pypi.org/simple/urllib3/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/urllib3/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/urllib3/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/urllib3/
+TRACE Cached request https://pypi.org/simple/charset-normalizer/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+TRACE Cached request https://pypi.org/simple/charset-normalizer/ has a cached response that does not allow staleness
+TRACE Request https://pypi.org/simple/charset-normalizer/ does not have a fresh cache because its age is 622 seconds, it is greater than the freshness lifetime of 600 seconds and stale cached responses are not allowed
+DEBUG Found stale response for: https://pypi.org/simple/charset-normalizer/
+DEBUG Sending revalidation request for: https://pypi.org/simple/charset-normalizer/
+TRACE Handling request for https://pypi.org/simple/charset-normalizer/ with authentication policy auto
+TRACE Request for https://pypi.org/simple/charset-normalizer/ is unauthenticated, checking cache
+TRACE No credentials in cache for URL https://pypi.org/simple/charset-normalizer/
+TRACE Attempting unauthenticated request for https://pypi.org/simple/charset-normalizer/
+TRACE Resource is not modified because old and new etag values ([34, 97, 97, 85, 111, 99, 74, 113, 116, 82, 49, 110, 103, 71, 111, 90, 74, 68, 103, 73, 103, 116, 81, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/six/
+TRACE Resource is not modified because old and new etag values ([34, 102, 71, 115, 66, 106, 109, 89, 47, 48, 113, 103, 87, 50, 49, 103, 100, 83, 52, 115, 71, 113, 81, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/soupsieve/
+TRACE Received package metadata for: six
+DEBUG Searching for a compatible version of six (>=1.5)
+DEBUG Found installed version of six==1.17.0 that satisfies >=1.5
+TRACE Using installed six 1.17.0 that satisfies >=1.5
+DEBUG Selecting: six==1.17.0 [installed] (installed)
+TRACE Received package metadata for: soupsieve
+DEBUG Found installed version of six==1.17.0 that satisfies >=1.5
+TRACE Using installed six 1.17.0 that satisfies >=1.5
+DEBUG Found installed version of soupsieve==2.7 that satisfies >1.2
+TRACE Using installed soupsieve 2.7 that satisfies >1.2
+TRACE Received installed distribution metadata for: soupsieve==2.7
+TRACE Received installed distribution metadata for: six==1.17.0
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0, requests==2.32.4, requests[socks]==2.32.4, tqdm==4.67.1, six==1.17.0
+TRACE Chose package for decision: soupsieve. remaining choices: idna, urllib3, pysocks, typing-extensions, certifi, charset-normalizer
+DEBUG Searching for a compatible version of soupsieve (>1.2)
+DEBUG Found installed version of soupsieve==2.7 that satisfies >1.2
+TRACE Using installed soupsieve 2.7 that satisfies >1.2
+DEBUG Selecting: soupsieve==2.7 [installed] (installed)
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0, requests==2.32.4, requests[socks]==2.32.4, tqdm==4.67.1, six==1.17.0, soupsieve==2.7
+TRACE Chose package for decision: typing-extensions. remaining choices: idna, urllib3, pysocks, charset-normalizer, certifi
+DEBUG Searching for a compatible version of typing-extensions (>=4.0.0)
+DEBUG Found installed version of typing-extensions==4.14.1 that satisfies >=4.0.0
+TRACE Using installed typing-extensions 4.14.1 that satisfies >=4.0.0
+DEBUG Selecting: typing-extensions==4.14.1 [installed] (installed)
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0, requests==2.32.4, requests[socks]==2.32.4, tqdm==4.67.1, six==1.17.0, soupsieve==2.7, typing-extensions==4.14.1
+TRACE Chose package for decision: charset-normalizer. remaining choices: idna, urllib3, pysocks, certifi
+TRACE Resource is not modified because old and new etag values ([34, 87, 82, 80, 55, 48, 53, 106, 115, 70, 90, 80, 106, 68, 106, 65, 51, 85, 118, 89, 53, 86, 81, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/certifi/
+TRACE Resource is not modified because old and new etag values ([34, 100, 105, 114, 51, 51, 122, 67, 87, 75, 122, 107, 112, 70, 73, 111, 71, 70, 67, 118, 77, 70, 119, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/idna/
+TRACE Received package metadata for: certifi
+TRACE Received package metadata for: idna
+DEBUG Found installed version of certifi==2025.7.14 that satisfies >=2017.4.17
+TRACE Using installed certifi 2025.7.14 that satisfies >=2017.4.17
+TRACE Received installed distribution metadata for: certifi==2025.7.14
+DEBUG Found installed version of idna==3.10 that satisfies >=2.5, <4
+TRACE Using installed idna 3.10 that satisfies >=2.5, <4
+TRACE Received installed distribution metadata for: idna==3.10
+TRACE Resource is not modified because old and new etag values ([34, 115, 105, 106, 118, 66, 54, 120, 102, 120, 114, 49, 71, 83, 81, 48, 115, 80, 114, 102, 103, 104, 103, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/urllib3/
+TRACE Resource is not modified because old and new etag values ([34, 79, 74, 80, 65, 83, 90, 84, 119, 79, 76, 47, 84, 52, 117, 122, 104, 73, 73, 73, 80, 54, 65, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/pysocks/
+TRACE Resource is not modified because old and new etag values ([34, 75, 87, 57, 79, 56, 121, 119, 102, 83, 55, 86, 68, 108, 70, 107, 66, 87, 65, 75, 50, 56, 119, 34]) match
+DEBUG Found not-modified response for: https://pypi.org/simple/charset-normalizer/
+TRACE Received package metadata for: pysocks
+TRACE Received package metadata for: urllib3
+DEBUG Found installed version of pysocks==1.7.1 that satisfies >=1.5.6, <1.5.7 | >=1.5.7+
+TRACE Using installed pysocks 1.7.1 that satisfies >=1.5.6, <1.5.7 | >=1.5.7+
+TRACE Received installed distribution metadata for: pysocks==1.7.1
+DEBUG Found installed version of urllib3==2.5.0 that satisfies >=1.21.1, <3
+TRACE Using installed urllib3 2.5.0 that satisfies >=1.21.1, <3
+TRACE Received installed distribution metadata for: urllib3==2.5.0
+TRACE Received package metadata for: charset-normalizer
+DEBUG Found installed version of charset-normalizer==3.4.2 that satisfies >=2, <4
+TRACE Using installed charset-normalizer 3.4.2 that satisfies >=2, <4
+DEBUG Searching for a compatible version of charset-normalizer (>=2, <4)
+DEBUG Found installed version of charset-normalizer==3.4.2 that satisfies >=2, <4
+TRACE Using installed charset-normalizer 3.4.2 that satisfies >=2, <4
+DEBUG Selecting: charset-normalizer==3.4.2 [installed] (installed)
+TRACE Received installed distribution metadata for: charset-normalizer==3.4.2
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0, requests==2.32.4, requests[socks]==2.32.4, tqdm==4.67.1, six==1.17.0, soupsieve==2.7, typing-extensions==4.14.1, charset-normalizer==3.4.2
+TRACE Chose package for decision: idna. remaining choices: certifi, urllib3, pysocks
+DEBUG Searching for a compatible version of idna (>=2.5, <4)
+DEBUG Found installed version of idna==3.10 that satisfies >=2.5, <4
+TRACE Using installed idna 3.10 that satisfies >=2.5, <4
+DEBUG Selecting: idna==3.10 [installed] (installed)
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0, requests==2.32.4, requests[socks]==2.32.4, tqdm==4.67.1, six==1.17.0, soupsieve==2.7, typing-extensions==4.14.1, charset-normalizer==3.4.2, idna==3.10
+TRACE Chose package for decision: urllib3. remaining choices: certifi, pysocks
+DEBUG Searching for a compatible version of urllib3 (>=1.21.1, <3)
+DEBUG Found installed version of urllib3==2.5.0 that satisfies >=1.21.1, <3
+TRACE Using installed urllib3 2.5.0 that satisfies >=1.21.1, <3
+DEBUG Selecting: urllib3==2.5.0 [installed] (installed)
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0, requests==2.32.4, requests[socks]==2.32.4, tqdm==4.67.1, six==1.17.0, soupsieve==2.7, typing-extensions==4.14.1, charset-normalizer==3.4.2, idna==3.10, urllib3==2.5.0
+TRACE Chose package for decision: certifi. remaining choices: pysocks
+DEBUG Searching for a compatible version of certifi (>=2017.4.17)
+DEBUG Found installed version of certifi==2025.7.14 that satisfies >=2017.4.17
+TRACE Using installed certifi 2025.7.14 that satisfies >=2017.4.17
+DEBUG Selecting: certifi==2025.7.14 [installed] (installed)
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0, requests==2.32.4, requests[socks]==2.32.4, tqdm==4.67.1, six==1.17.0, soupsieve==2.7, typing-extensions==4.14.1, charset-normalizer==3.4.2, idna==3.10, urllib3==2.5.0, certifi==2025.7.14
+TRACE Chose package for decision: pysocks. remaining choices: 
+DEBUG Searching for a compatible version of pysocks (>=1.5.6, <1.5.7 | >=1.5.7+)
+DEBUG Found installed version of pysocks==1.7.1 that satisfies >=1.5.6, <1.5.7 | >=1.5.7+
+TRACE Using installed pysocks 1.7.1 that satisfies >=1.5.6, <1.5.7 | >=1.5.7+
+DEBUG Selecting: pysocks==1.7.1 [installed] (installed)
+TRACE Assigned packages: root==0a0.dev0, pyarrow==16.0.0, pandas==2.3.1, gdown==5.2.0, duckdb==1.3.2, numpy==2.3.1, numpy{python_full_version >= '3.12'}==2.3.1, python-dateutil==2.9.0.post0, pytz==2025.2, tzdata==2025.2, beautifulsoup4==4.13.4, filelock==3.18.0, requests==2.32.4, requests[socks]==2.32.4, tqdm==4.67.1, six==1.17.0, soupsieve==2.7, typing-extensions==4.14.1, charset-normalizer==3.4.2, idna==3.10, urllib3==2.5.0, certifi==2025.7.14, pysocks==1.7.1
+DEBUG Tried 20 versions: beautifulsoup4 1, certifi 1, charset-normalizer 1, duckdb 1, filelock 1, gdown 1, idna 1, numpy 1, pandas 1, pyarrow 1, pysocks 1, python-dateutil 1, pytz 1, requests 1, six 1, soupsieve 1, tqdm 1, typing-extensions 1, tzdata 1, urllib3 1
+DEBUG marker environment resolution took 0.365s
+TRACE Resolution: ResolverEnvironment { kind: Specific { marker_env: ResolverMarkerEnvironment(MarkerEnvironment { inner: MarkerEnvironmentInner { implementation_name: "cpython", implementation_version: StringVersion { string: "3.12.9", version: "3.12.9" }, os_name: "posix", platform_machine: "x86_64", platform_python_implementation: "CPython", platform_release: "19.6.0", platform_system: "Darwin", platform_version: "Darwin Kernel Version 19.6.0: Thu Oct 29 22:56:45 PDT 2020; root:xnu-6153.141.2.2~1/RELEASE_X86_64", python_full_version: StringVersion { string: "3.12.9", version: "3.12.9" }, python_version: StringVersion { string: "3.12", version: "3.12" }, sys_platform: "darwin" } }) } }
+TRACE Resolution edge: ROOT -> pandas
+TRACE Resolution edge:     0a0.dev0 -> 2.3.1
+TRACE Resolution edge: ROOT -> gdown
+TRACE Resolution edge:     0a0.dev0 -> 5.2.0
+TRACE Resolution edge: ROOT -> duckdb
+TRACE Resolution edge:     0a0.dev0 -> 1.3.2
+TRACE Resolution edge: ROOT -> pyarrow
+TRACE Resolution edge:     0a0.dev0 -> 16.0.0
+TRACE Resolution edge: pandas -> numpy
+TRACE Resolution edge:     2.3.1 -> 2.3.1 ; python_full_version >= '3.12'
+TRACE Resolution edge: pandas -> python-dateutil
+TRACE Resolution edge:     2.3.1 -> 2.9.0.post0
+TRACE Resolution edge: pandas -> pytz
+TRACE Resolution edge:     2.3.1 -> 2025.2
+TRACE Resolution edge: pandas -> tzdata
+TRACE Resolution edge:     2.3.1 -> 2025.2
+TRACE Resolution edge: pyarrow -> numpy
+TRACE Resolution edge:     16.0.0 -> 2.3.1
+TRACE Resolution edge: python-dateutil -> six
+TRACE Resolution edge:     2.9.0.post0 -> 1.17.0
+TRACE Resolution edge: requests -> charset-normalizer
+TRACE Resolution edge:     2.32.4 -> 3.4.2
+TRACE Resolution edge: requests -> idna
+TRACE Resolution edge:     2.32.4 -> 3.10
+TRACE Resolution edge: requests -> urllib3
+TRACE Resolution edge:     2.32.4 -> 2.5.0
+TRACE Resolution edge: requests -> certifi
+TRACE Resolution edge:     2.32.4 -> 2025.7.14
+TRACE Resolution edge: beautifulsoup4 -> soupsieve
+TRACE Resolution edge:     4.13.4 -> 2.7
+TRACE Resolution edge: beautifulsoup4 -> typing-extensions
+TRACE Resolution edge:     4.13.4 -> 4.14.1
+TRACE Resolution edge: gdown -> beautifulsoup4
+TRACE Resolution edge:     5.2.0 -> 4.13.4
+TRACE Resolution edge: gdown -> filelock
+TRACE Resolution edge:     5.2.0 -> 3.18.0
+TRACE Resolution edge: gdown -> requests
+TRACE Resolution edge:     5.2.0 -> 2.32.4 (extra: socks)
+TRACE Resolution edge: gdown -> requests
+TRACE Resolution edge:     5.2.0 -> 2.32.4
+TRACE Resolution edge: gdown -> tqdm
+TRACE Resolution edge:     5.2.0 -> 4.67.1
+TRACE Resolution edge: requests -> pysocks
+TRACE Resolution edge:     2.32.4 (extra: socks) -> 1.7.1
+Resolved 20 packages in 368ms
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("python-dateutil"), version: "2.9.0.post0", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/python_dateutil-2.9.0.post0.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "2.9.0.post0" }]), index: None, conflict: None }
+DEBUG Requirement already installed: python-dateutil==2.9.0.post0
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("idna"), version: "3.10", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/idna-3.10.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "3.10" }]), index: None, conflict: None }
+DEBUG Requirement already installed: idna==3.10
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("beautifulsoup4"), version: "4.13.4", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/beautifulsoup4-4.13.4.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "4.13.4" }]), index: None, conflict: None }
+DEBUG Requirement already installed: beautifulsoup4==4.13.4
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("certifi"), version: "2025.7.14", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/certifi-2025.7.14.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "2025.7.14" }]), index: None, conflict: None }
+DEBUG Requirement already installed: certifi==2025.7.14
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("urllib3"), version: "2.5.0", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/urllib3-2.5.0.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "2.5.0" }]), index: None, conflict: None }
+DEBUG Requirement already installed: urllib3==2.5.0
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("pysocks"), version: "1.7.1", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/PySocks-1.7.1.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "1.7.1" }]), index: None, conflict: None }
+DEBUG Requirement already installed: pysocks==1.7.1
+DEBUG Registry requirement already cached: pyarrow==16.0.0
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("pandas"), version: "2.3.1", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/pandas-2.3.1.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "2.3.1" }]), index: None, conflict: None }
+DEBUG Requirement already installed: pandas==2.3.1
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("filelock"), version: "3.18.0", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/filelock-3.18.0.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "3.18.0" }]), index: None, conflict: None }
+DEBUG Requirement already installed: filelock==3.18.0
+DEBUG Identified uncached distribution: duckdb==1.3.2
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("tzdata"), version: "2025.2", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/tzdata-2025.2.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "2025.2" }]), index: None, conflict: None }
+DEBUG Requirement already installed: tzdata==2025.2
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("six"), version: "1.17.0", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/six-1.17.0.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "1.17.0" }]), index: None, conflict: None }
+DEBUG Requirement already installed: six==1.17.0
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("gdown"), version: "5.2.0", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/gdown-5.2.0.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "5.2.0" }]), index: None, conflict: None }
+DEBUG Requirement already installed: gdown==5.2.0
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("requests"), version: "2.32.4", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/requests-2.32.4.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "2.32.4" }]), index: None, conflict: None }
+DEBUG Requirement already installed: requests==2.32.4
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("tqdm"), version: "4.67.1", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/tqdm-4.67.1.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "4.67.1" }]), index: None, conflict: None }
+DEBUG Requirement already installed: tqdm==4.67.1
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("typing-extensions"), version: "4.14.1", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/typing_extensions-4.14.1.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "4.14.1" }]), index: None, conflict: None }
+DEBUG Requirement already installed: typing-extensions==4.14.1
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("numpy"), version: "2.3.1", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/numpy-2.3.1.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "2.3.1" }]), index: None, conflict: None }
+DEBUG Requirement already installed: numpy==2.3.1
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("soupsieve"), version: "2.7", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/soupsieve-2.7.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "2.7" }]), index: None, conflict: None }
+DEBUG Requirement already installed: soupsieve==2.7
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("charset-normalizer"), version: "3.4.2", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/charset_normalizer-3.4.2.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "3.4.2" }]), index: None, conflict: None }
+DEBUG Requirement already installed: charset-normalizer==3.4.2
+TRACE Comparing installed with source: Registry(InstalledRegistryDist { name: PackageName("pytz"), version: "2025.2", path: "/Users/mvcorrea/Private/20250615_UFC_Projects/2025-01_DataMining/.venv/lib/python3.12/site-packages/pytz-2025.2.dist-info", cache_info: None }) Registry { specifier: VersionSpecifiers([VersionSpecifier { operator: Equal, version: "2025.2" }]), index: None, conflict: None }
+DEBUG Requirement already installed: pytz==2025.2
+DEBUG Unnecessary package: pip==25.1.1
+TRACE Checking lock for `/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2` at `/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/.lock`
+DEBUG Acquired lock for `/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2`
+TRACE Cached request https://files.pythonhosted.org/packages/47/24/a2e7fb78fba577641c286fe33185789ab1e1569ccdf4d142e005995991d2/duckdb-1.3.2.tar.gz is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 365000000s
+DEBUG Found fresh response for: https://files.pythonhosted.org/packages/47/24/a2e7fb78fba577641c286fe33185789ab1e1569ccdf4d142e005995991d2/duckdb-1.3.2.tar.gz
+   Building duckdb==1.3.2
+DEBUG Building: duckdb==1.3.2
+TRACE Preview is disabled, not checking for direct build
+DEBUG Using base executable for virtual environment: /opt/local/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12
+DEBUG Ignoring empty directory
+DEBUG Resolving build requirements
+DEBUG Solving with installed Python version: 3.12.9
+DEBUG Solving with target Python version: >=3.12.9
+TRACE Assigned packages: 
+TRACE Chose package for decision: root. remaining choices: 
+DEBUG Adding direct dependency: setuptools>=60
+DEBUG Adding direct dependency: setuptools-scm>=6.4, <8.0
+DEBUG Adding direct dependency: pybind11>=2.6.0
+TRACE Assigned packages: root==0a0.dev0
+TRACE Fetching metadata for setuptools from https://pypi.org/simple/setuptools/
+TRACE Chose package for decision: setuptools. remaining choices: pybind11, setuptools-scm
+TRACE Fetching metadata for setuptools-scm from https://pypi.org/simple/setuptools-scm/
+TRACE Fetching metadata for pybind11 from https://pypi.org/simple/pybind11/
+TRACE Cached request https://pypi.org/simple/setuptools-scm/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+DEBUG Found fresh response for: https://pypi.org/simple/setuptools-scm/
+TRACE Received package metadata for: setuptools-scm
+TRACE Cached request https://pypi.org/simple/pybind11/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+DEBUG Found fresh response for: https://pypi.org/simple/pybind11/
+TRACE Received package metadata for: pybind11
+TRACE Selecting candidate for setuptools-scm with range >=6.4, <8.0 with 88 remote versions
+TRACE Found candidate for package setuptools-scm with range >=6.4, <8.0 after 1 steps: 7.1.0 version
+TRACE Returning candidate for package setuptools-scm with range >=6.4, <8.0 after 1 steps
+TRACE Selecting candidate for pybind11 with range >=2.6.0 with 62 remote versions
+TRACE Found candidate for package pybind11 with range >=2.6.0 after 1 steps: 3.0.0 version
+TRACE Returning candidate for package pybind11 with range >=2.6.0 after 1 steps
+TRACE Cached request https://files.pythonhosted.org/packages/41/9c/85f50a5476832c3efc67b6d7997808388236ae4754bf53e1749b3bc27577/pybind11-3.0.0-py3-none-any.whl.metadata is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 365000000s
+DEBUG Found fresh response for: https://files.pythonhosted.org/packages/41/9c/85f50a5476832c3efc67b6d7997808388236ae4754bf53e1749b3bc27577/pybind11-3.0.0-py3-none-any.whl.metadata
+TRACE Received built distribution metadata for: pybind11==3.0.0
+TRACE Cached request https://files.pythonhosted.org/packages/1d/66/8f42c941be949ef2b22fe905d850c794e7c170a526023612aad5f3a121ad/setuptools_scm-7.1.0-py3-none-any.whl.metadata is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 365000000s
+DEBUG Found fresh response for: https://files.pythonhosted.org/packages/1d/66/8f42c941be949ef2b22fe905d850c794e7c170a526023612aad5f3a121ad/setuptools_scm-7.1.0-py3-none-any.whl.metadata
+TRACE Received built distribution metadata for: setuptools-scm==7.1.0
+TRACE Cached request https://pypi.org/simple/setuptools/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+DEBUG Found fresh response for: https://pypi.org/simple/setuptools/
+TRACE Received package metadata for: setuptools
+TRACE Selecting candidate for setuptools with range >=60 with 615 remote versions
+DEBUG Searching for a compatible version of setuptools (>=60)
+TRACE Selecting candidate for setuptools with range >=60 with 615 remote versions
+TRACE Found candidate for package setuptools with range >=60 after 1 steps: 80.9.0 version
+TRACE Found candidate for package setuptools with range >=60 after 1 steps: 80.9.0 version
+TRACE Returning candidate for package setuptools with range >=60 after 1 steps
+TRACE Returning candidate for package setuptools with range >=60 after 1 steps
+DEBUG Selecting: setuptools==80.9.0 [compatible] (setuptools-80.9.0-py3-none-any.whl)
+TRACE Cached request https://files.pythonhosted.org/packages/a3/dc/17031897dae0efacfea57dfd3a82fdd2a2aeb58e0ff71b77b87e44edc772/setuptools-80.9.0-py3-none-any.whl.metadata is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 365000000s
+DEBUG Found fresh response for: https://files.pythonhosted.org/packages/a3/dc/17031897dae0efacfea57dfd3a82fdd2a2aeb58e0ff71b77b87e44edc772/setuptools-80.9.0-py3-none-any.whl.metadata
+TRACE Received built distribution metadata for: setuptools==80.9.0
+TRACE Assigned packages: root==0a0.dev0, setuptools==80.9.0
+TRACE Chose package for decision: setuptools-scm. remaining choices: pybind11
+DEBUG Searching for a compatible version of setuptools-scm (>=6.4, <8.0)
+TRACE Selecting candidate for setuptools-scm with range >=6.4, <8.0 with 88 remote versions
+TRACE Found candidate for package setuptools-scm with range >=6.4, <8.0 after 1 steps: 7.1.0 version
+TRACE Returning candidate for package setuptools-scm with range >=6.4, <8.0 after 1 steps
+DEBUG Selecting: setuptools-scm==7.1.0 [compatible] (setuptools_scm-7.1.0-py3-none-any.whl)
+DEBUG Adding transitive dependency for setuptools-scm==7.1.0: packaging>=20.0
+DEBUG Adding transitive dependency for setuptools-scm==7.1.0: setuptools*
+DEBUG Adding transitive dependency for setuptools-scm==7.1.0: typing-extensions*
+TRACE Assigned packages: root==0a0.dev0, setuptools==80.9.0, setuptools-scm==7.1.0
+TRACE Chose package for decision: pybind11. remaining choices: typing-extensions, packaging
+DEBUG Searching for a compatible version of pybind11 (>=2.6.0)
+TRACE Selecting candidate for pybind11 with range >=2.6.0 with 62 remote versions
+TRACE Found candidate for package pybind11 with range >=2.6.0 after 1 steps: 3.0.0 version
+TRACE Returning candidate for package pybind11 with range >=2.6.0 after 1 steps
+DEBUG Selecting: pybind11==3.0.0 [compatible] (pybind11-3.0.0-py3-none-any.whl)
+TRACE Fetching metadata for packaging from https://pypi.org/simple/packaging/
+TRACE Assigned packages: root==0a0.dev0, setuptools==80.9.0, setuptools-scm==7.1.0, pybind11==3.0.0
+TRACE Chose package for decision: packaging. remaining choices: typing-extensions
+TRACE Selecting candidate for typing-extensions with range * with 47 remote versions
+TRACE Found candidate for package typing-extensions with range * after 1 steps: 4.14.1 version
+TRACE Returning candidate for package typing-extensions with range * after 1 steps
+TRACE Cached request https://pypi.org/simple/packaging/ is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 600s
+DEBUG Found fresh response for: https://pypi.org/simple/packaging/
+TRACE Received package metadata for: packaging
+TRACE Selecting candidate for packaging with range >=20.0 with 47 remote versions
+DEBUG Searching for a compatible version of packaging (>=20.0)
+TRACE Found candidate for package packaging with range >=20.0 after 1 steps: 25.0 version
+TRACE Selecting candidate for packaging with range >=20.0 with 47 remote versions
+TRACE Returning candidate for package packaging with range >=20.0 after 1 steps
+TRACE Found candidate for package packaging with range >=20.0 after 1 steps: 25.0 version
+TRACE Returning candidate for package packaging with range >=20.0 after 1 steps
+DEBUG Selecting: packaging==25.0 [compatible] (packaging-25.0-py3-none-any.whl)
+TRACE Cached request https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl.metadata is storable because its response has a 'public' cache-control directive
+TRACE Freshness lifetime found via cache-control max age setting: 365000000s
+DEBUG Found fresh response for: https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl.metadata
+TRACE Received built distribution metadata for: packaging==25.0
+TRACE Assigned packages: root==0a0.dev0, setuptools==80.9.0, setuptools-scm==7.1.0, pybind11==3.0.0, packaging==25.0
+TRACE Chose package for decision: typing-extensions. remaining choices: 
+DEBUG Searching for a compatible version of typing-extensions (*)
+TRACE Selecting candidate for typing-extensions with range * with 47 remote versions
+TRACE Found candidate for package typing-extensions with range * after 1 steps: 4.14.1 version
+TRACE Returning candidate for package typing-extensions with range * after 1 steps
+DEBUG Selecting: typing-extensions==4.14.1 [compatible] (typing_extensions-4.14.1-py3-none-any.whl)
+TRACE Assigned packages: root==0a0.dev0, setuptools==80.9.0, setuptools-scm==7.1.0, pybind11==3.0.0, packaging==25.0, typing-extensions==4.14.1
+DEBUG Tried 5 versions: packaging 1, pybind11 1, setuptools 1, setuptools-scm 1, typing-extensions 1
+DEBUG marker environment resolution took 0.024s
+TRACE Resolution: ResolverEnvironment { kind: Specific { marker_env: ResolverMarkerEnvironment(MarkerEnvironment { inner: MarkerEnvironmentInner { implementation_name: "cpython", implementation_version: StringVersion { string: "3.12.9", version: "3.12.9" }, os_name: "posix", platform_machine: "x86_64", platform_python_implementation: "CPython", platform_release: "19.6.0", platform_system: "Darwin", platform_version: "Darwin Kernel Version 19.6.0: Thu Oct 29 22:56:45 PDT 2020; root:xnu-6153.141.2.2~1/RELEASE_X86_64", python_full_version: StringVersion { string: "3.12.9", version: "3.12.9" }, python_version: StringVersion { string: "3.12", version: "3.12" }, sys_platform: "darwin" } }) } }
+TRACE Resolution edge: ROOT -> setuptools
+TRACE Resolution edge:     0a0.dev0 -> 80.9.0
+TRACE Resolution edge: ROOT -> setuptools-scm
+TRACE Resolution edge:     0a0.dev0 -> 7.1.0
+TRACE Resolution edge: ROOT -> pybind11
+TRACE Resolution edge:     0a0.dev0 -> 3.0.0
+TRACE Resolution edge: setuptools-scm -> packaging
+TRACE Resolution edge:     7.1.0 -> 25.0
+TRACE Resolution edge: setuptools-scm -> setuptools
+TRACE Resolution edge:     7.1.0 -> 80.9.0
+TRACE Resolution edge: setuptools-scm -> typing-extensions
+TRACE Resolution edge:     7.1.0 -> 4.14.1
+DEBUG Installing in typing-extensions==4.14.1, setuptools-scm==7.1.0, pybind11==3.0.0, packaging==25.0, setuptools==80.9.0 in /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff
+DEBUG Registry requirement already cached: typing-extensions==4.14.1
+DEBUG Registry requirement already cached: setuptools-scm==7.1.0
+DEBUG Registry requirement already cached: pybind11==3.0.0
+DEBUG Registry requirement already cached: packaging==25.0
+DEBUG Registry requirement already cached: setuptools==80.9.0
+DEBUG Installing build requirements: typing-extensions==4.14.1, setuptools-scm==7.1.0, pybind11==3.0.0, packaging==25.0, setuptools==80.9.0
+TRACE Extracting file name=PackageName("typing-extensions")
+TRACE Extracting file name=PackageName("pybind11")
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/MV1Y6LuzaNrQo3PW7WnMH/typing_extensions-4.14.1.dist-info to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/typing_extensions-4.14.1.dist-info
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/x2u9HyDoFHZple1JcidZ2/pybind11 to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11
+TRACE Extracting file name=PackageName("setuptools-scm")
+TRACE Extracting file name=PackageName("packaging")
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/TkJVvyckXXThcn1XL9ccn/setuptools_scm to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/setuptools_scm
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/P0AtWQYCKCZWRbdCRKVTw/packaging to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/packaging
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/MV1Y6LuzaNrQo3PW7WnMH/typing_extensions.py to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/typing_extensions.py
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/x2u9HyDoFHZple1JcidZ2/pybind11-3.0.0.dist-info to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11-3.0.0.dist-info
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/TkJVvyckXXThcn1XL9ccn/setuptools_scm-7.1.0.dist-info to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/setuptools_scm-7.1.0.dist-info
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/P0AtWQYCKCZWRbdCRKVTw/packaging-25.0.dist-info to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/packaging-25.0.dist-info
+TRACE Extracted 2 files name=PackageName("typing-extensions")
+TRACE Extracted 2 files name=PackageName("pybind11")
+TRACE Extracted 2 files name=PackageName("setuptools-scm")
+TRACE Extracted 2 files name=PackageName("packaging")
+TRACE No entrypoints name=PackageName("packaging")
+TRACE No data name=PackageName("packaging")
+TRACE Writing installer metadata name=PackageName("packaging")
+TRACE No entrypoints name=PackageName("typing-extensions")
+TRACE No data name=PackageName("typing-extensions")
+TRACE Writing installer metadata name=PackageName("typing-extensions")
+TRACE No entrypoints name=PackageName("setuptools-scm")
+TRACE No data name=PackageName("setuptools-scm")
+TRACE Writing installer metadata name=PackageName("setuptools-scm")
+TRACE Writing record name=PackageName("typing-extensions")
+TRACE Writing record name=PackageName("setuptools-scm")
+TRACE Writing record name=PackageName("packaging")
+TRACE Writing entrypoints name=PackageName("pybind11")
+TRACE Extracting file name=PackageName("setuptools")
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/Qwy5lxkp4B5rENXU-f8cL/setuptools-80.9.0.dist-info to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/setuptools-80.9.0.dist-info
+TRACE No data name=PackageName("pybind11")
+TRACE Writing installer metadata name=PackageName("pybind11")
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/Qwy5lxkp4B5rENXU-f8cL/distutils-precedence.pth to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/distutils-precedence.pth
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/Qwy5lxkp4B5rENXU-f8cL/setuptools to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/setuptools
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/Qwy5lxkp4B5rENXU-f8cL/pkg_resources to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pkg_resources
+TRACE Writing record name=PackageName("pybind11")
+TRACE Cloning /Users/mvcorrea/.cache/uv/archive-v0/Qwy5lxkp4B5rENXU-f8cL/_distutils_hack to /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/_distutils_hack
+TRACE Extracted 5 files name=PackageName("setuptools")
+TRACE No entrypoints name=PackageName("setuptools")
+TRACE No data name=PackageName("setuptools")
+TRACE Writing installer metadata name=PackageName("setuptools")
+TRACE Writing record name=PackageName("setuptools")
+DEBUG Creating PEP 517 build environment
+DEBUG Calling `setuptools.build_meta.get_requires_for_build_wheel()`
+DEBUG /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+DEBUG !!
+DEBUG 
+DEBUG         ********************************************************************************
+DEBUG         Please consider removing the following classifiers in favor of a SPDX license expression:
+DEBUG 
+DEBUG         License :: OSI Approved :: MIT License
+DEBUG 
+DEBUG         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+DEBUG         ********************************************************************************
+DEBUG 
+DEBUG !!
+DEBUG   dist._finalize_license_expression()
+DEBUG /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+DEBUG !!
+DEBUG 
+DEBUG         ********************************************************************************
+DEBUG         Please consider removing the following classifiers in favor of a SPDX license expression:
+DEBUG 
+DEBUG         License :: OSI Approved :: MIT License
+DEBUG 
+DEBUG         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+DEBUG         ********************************************************************************
+DEBUG 
+DEBUG !!
+DEBUG   self._finalize_license_expression()
+DEBUG running egg_info
+DEBUG writing duckdb.egg-info/PKG-INFO
+DEBUG writing dependency_links to duckdb.egg-info/dependency_links.txt
+DEBUG writing top-level names to duckdb.egg-info/top_level.txt
+DEBUG listing git files failed - pretending there aren't any
+DEBUG reading manifest file 'duckdb.egg-info/SOURCES.txt'
+DEBUG reading manifest template 'MANIFEST.in'
+DEBUG warning: no files found matching '*.h' under directory 'duckdb'
+DEBUG warning: no files found matching '*.hpp' under directory 'duckdb'
+DEBUG warning: no files found matching '*.cpp' under directory 'duckdb'
+DEBUG warning: no files found matching '*.h' under directory 'src'
+DEBUG warning: manifest_maker: MANIFEST.in, line 6: 'recursive-include' expects <dir> <pattern1> <pattern2> ...
+DEBUG 
+DEBUG writing manifest file 'duckdb.egg-info/SOURCES.txt'
+DEBUG Calling `setuptools.build_meta.build_wheel("/Users/mvcorrea/.cache/uv/builds-v0/.tmpB9ULMD", {}, None)`
+DEBUG /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+DEBUG !!
+DEBUG 
+DEBUG         ********************************************************************************
+DEBUG         Please consider removing the following classifiers in favor of a SPDX license expression:
+DEBUG 
+DEBUG         License :: OSI Approved :: MIT License
+DEBUG 
+DEBUG         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+DEBUG         ********************************************************************************
+DEBUG 
+DEBUG !!
+DEBUG   dist._finalize_license_expression()
+DEBUG /Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+DEBUG !!
+DEBUG 
+DEBUG         ********************************************************************************
+DEBUG         Please consider removing the following classifiers in favor of a SPDX license expression:
+DEBUG 
+DEBUG         License :: OSI Approved :: MIT License
+DEBUG 
+DEBUG         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+DEBUG         ********************************************************************************
+DEBUG 
+DEBUG !!
+DEBUG   self._finalize_license_expression()
+DEBUG running bdist_wheel
+DEBUG running build
+DEBUG running build_py
+DEBUG copying duckdb/filesystem.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb
+DEBUG copying duckdb/__init__.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb
+DEBUG copying duckdb/bytes_io_wrapper.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb
+DEBUG copying duckdb/udf.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb
+DEBUG copying duckdb/typing/__init__.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/typing
+DEBUG copying duckdb/query_graph/__main__.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/query_graph
+DEBUG copying duckdb/functional/__init__.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/functional
+DEBUG copying duckdb/value/constant.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/value
+DEBUG copying adbc_driver_duckdb/dbapi.py -> build/lib.macosx-10.15-x86_64-cpython-312/adbc_driver_duckdb
+DEBUG copying adbc_driver_duckdb/__init__.py -> build/lib.macosx-10.15-x86_64-cpython-312/adbc_driver_duckdb
+DEBUG copying duckdb/experimental/__init__.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental
+DEBUG copying duckdb/experimental/spark/exception.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark
+DEBUG copying duckdb/experimental/spark/_typing.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark
+DEBUG copying duckdb/experimental/spark/_globals.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark
+DEBUG copying duckdb/experimental/spark/conf.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark
+DEBUG copying duckdb/experimental/spark/__init__.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark
+DEBUG copying duckdb/experimental/spark/context.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark
+DEBUG copying duckdb/experimental/spark/sql/catalog.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/functions.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/_typing.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/dataframe.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/conf.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/session.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/type_utils.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/__init__.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/types.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/readwriter.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/group.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/udf.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/streaming.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/sql/column.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/sql
+DEBUG copying duckdb/experimental/spark/errors/error_classes.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/errors
+DEBUG copying duckdb/experimental/spark/errors/__init__.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/errors
+DEBUG copying duckdb/experimental/spark/errors/utils.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/errors
+DEBUG copying duckdb/experimental/spark/errors/exceptions/__init__.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/errors/exceptions
+DEBUG copying duckdb/experimental/spark/errors/exceptions/base.py -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark/errors/exceptions
+DEBUG running egg_info
+DEBUG writing duckdb.egg-info/PKG-INFO
+DEBUG writing dependency_links to duckdb.egg-info/dependency_links.txt
+DEBUG writing top-level names to duckdb.egg-info/top_level.txt
+DEBUG listing git files failed - pretending there aren't any
+DEBUG reading manifest file 'duckdb.egg-info/SOURCES.txt'
+DEBUG reading manifest template 'MANIFEST.in'
+DEBUG warning: no files found matching '*.h' under directory 'duckdb'
+DEBUG warning: no files found matching '*.hpp' under directory 'duckdb'
+DEBUG warning: no files found matching '*.cpp' under directory 'duckdb'
+DEBUG warning: no files found matching '*.h' under directory 'src'
+DEBUG warning: manifest_maker: MANIFEST.in, line 6: 'recursive-include' expects <dir> <pattern1> <pattern2> ...
+DEBUG 
+DEBUG writing manifest file 'duckdb.egg-info/SOURCES.txt'
+DEBUG copying duckdb-stubs/__init__.pyi -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb-stubs
+DEBUG copying duckdb-stubs/functional/__init__.pyi -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb-stubs/functional
+DEBUG copying duckdb-stubs/typing/__init__.pyi -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb-stubs/typing
+DEBUG copying duckdb-stubs/value/__init__.pyi -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb-stubs/value
+DEBUG copying duckdb-stubs/value/constant/__init__.pyi -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb-stubs/value/constant
+DEBUG copying duckdb/experimental/spark/LICENSE -> build/lib.macosx-10.15-x86_64-cpython-312/duckdb/experimental/spark
+DEBUG running build_ext
+DEBUG building 'duckdb.duckdb' extension
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/core_functions/function_list.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/core_functions/function_list.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/core_functions/core_functions_extension.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/core_functions/core_functions_extension.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/core_functions/lambda_functions.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/core_functions/lambda_functions.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-current.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-current.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-dateadd.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-dateadd.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-datefunc.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-datefunc.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-datepart.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-datepart.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-datesub.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-datesub.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG duckdb_build/extension/icu/./icu-dateadd.cpp:23:9: warning: moving a local object in a return statement prevents copy elision [-Wpessimizing-move]
+DEBUG         return std::move(result);
+DEBUG                ^
+DEBUG duckdb_build/extension/icu/./icu-dateadd.cpp:23:9: note: remove std::move call here
+DEBUG         return std::move(result);
+DEBUG                ^~~~~~~~~~      ~
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-datetrunc.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-datetrunc.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG 1 warning generated.
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-list-range.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-list-range.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-makedate.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-makedate.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-strptime.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-strptime.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-table-range.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-table-range.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-timebucket.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-timebucket.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu-timezone.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu-timezone.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/./icu_extension.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/icu_extension.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7
+DEBUG /usr/bin/clang++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -pipe -Os -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -DDUCKDB_PYTHON_LIB_NAME=duckdb -DDUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED -DDUCKDB_EXTENSION_AUTOLOAD_DEFAULT=1 -DDUCKDB_EXTENSION_AUTOINSTALL_DEFAULT=1 -Iduckdb_build/src/include -Iduckdb_build/third_party/concurrentqueue -Iduckdb_build/third_party/fast_float -Iduckdb_build/third_party/fastpforlib -Iduckdb_build/third_party/fmt/include -Iduckdb_build/third_party/fsst -Iduckdb_build/third_party/httplib -Iduckdb_build/third_party/hyperloglog -Iduckdb_build/third_party/jaro_winkler -Iduckdb_build/third_party/jaro_winkler/details -Iduckdb_build/third_party/libpg_query -Iduckdb_build/third_party/libpg_query/include -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/mbedtls/library -Iduckdb_build/third_party/miniz -Iduckdb_build/third_party/pcg -Iduckdb_build/third_party/re2 -Iduckdb_build/third_party/skiplist -Iduckdb_build/third_party/tdigest -Iduckdb_build/third_party/utf8proc -Iduckdb_build/third_party/utf8proc/include -Iduckdb_build/third_party/yyjson/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/core_functions/include -Iduckdb_build/extension/parquet/include -Iduckdb_build/third_party/parquet -Iduckdb_build/third_party/thrift -Iduckdb_build/third_party/lz4 -Iduckdb_build/third_party/brotli/include -Iduckdb_build/third_party/brotli/common -Iduckdb_build/third_party/brotli/dec -Iduckdb_build/third_party/brotli/enc -Iduckdb_build/third_party/snappy -Iduckdb_build/third_party/mbedtls -Iduckdb_build/third_party/mbedtls/include -Iduckdb_build/third_party/zstd/include -Iduckdb_build/extension/icu/include -Iduckdb_build/extension/icu/third_party/icu/common -Iduckdb_build/extension/icu/third_party/icu/i18n -Iduckdb_build/extension/json/include -Iduckdb_build -I/Users/mvcorrea/.cache/uv/sdists-v9/pypi/duckdb/1.3.2/K2CmL8isfyQ2w2pZ4ErjG/src/src/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/lib/python3.12/site-packages/pybind11/include -I/Users/mvcorrea/.cache/uv/builds-v0/.tmpwjfHff/include -I/opt/local/Library/Frameworks/Python.framework/Versions/3.12/include/python3.12 -c duckdb_build/extension/icu/third_party/icu/stubdata/stubdata.cpp -o build/temp.macosx-10.15-x86_64-cpython-312/duckdb_build/extension/icu/third_party/icu/stubdata/stubdata.o -std=c++11 -g0 -stdlib=libc++ -mmacosx-version-min=10.7

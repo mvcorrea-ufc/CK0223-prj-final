@@ -9,7 +9,13 @@ This project focuses on the initial steps of a data mining pipeline: data cleani
 - `requirements.txt`: A list of Python dependencies for this project.
 - `.gitignore`: Specifies files and directories to be ignored by Git.
 
-## How to Run
+## Development Environment
+
+There are two ways to set up the development environment for this project.
+
+### Local Environment (Legacy)
+
+This method involves setting up a Python virtual environment on your local machine.
 
 1.  **Set up the environment:**
     It is recommended to use a virtual environment. This project uses `uv`.
@@ -32,6 +38,44 @@ This project focuses on the initial steps of a data mining pipeline: data cleani
     python3 prj_part01/process_data.py
     ```
     The script will automatically download and extract the dataset if it's not found locally. It will then perform all the cleaning and feature engineering steps, print a summary of the operations, and save the processed data to `prj_files/fakeTelegram.BR_2022_processed.csv`.
+
+### Containerized Development with Podman (Recommended)
+
+This method uses Podman and a Dockerfile to create a consistent, reproducible development environment that can be accessed via SSH. This is the recommended approach.
+
+**Prerequisites:**
+- Podman installed on your system.
+- An SSH client.
+
+**Setup and Usage:**
+
+1.  **Add your SSH Public Key:**
+    You **must** place your public SSH key (e.g., `id_rsa.pub`) into the `config/ssh/` directory. The container will use this key to authorize your SSH connection.
+    ```bash
+    # Example:
+    cp ~/.ssh/id_rsa.pub config/ssh/
+    ```
+
+2.  **Build and Run the Container:**
+    Use `podman-compose` to build the image and run the container in the background.
+    ```bash
+    podman-compose up -d --build
+    ```
+
+3.  **Connect via SSH:**
+    SSH into the container. The project directory is mounted at `/home/dev/app`.
+    ```bash
+    ssh dev@localhost -p 2222
+    ```
+
+4.  **Working in the Container:**
+    Once inside the container, you can run the project scripts as you would locally. Any changes you make to the files on your local machine will be immediately reflected inside the container.
+
+5.  **Stopping the Container:**
+    When you are finished, you can stop the container.
+    ```bash
+    podman-compose down
+    ```
 
 ## Tasks Completed (Lista 1)
 

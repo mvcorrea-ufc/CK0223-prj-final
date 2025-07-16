@@ -1,0 +1,22 @@
+# Git
+.git/
+.gitignore
+
+# Virtual Environment
+.venv/
+venv/
+*.venv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS / IDE
+.DS_Store
+.idea/
+
+# Local Data
+prj_files/*.csv
+prj_files/*.zip
+prj_files/*.parquet
+prj_files/*.duckdb
