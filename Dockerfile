@@ -11,10 +11,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     openssh-server \
     && rm -rf /var/lib/apt/lists/*
 
-# Install uv, a fast Python package installer
-RUN apt-get update && apt-get install -y curl && \
-    curl -LsSf https://astral.sh/uv/install.sh | sh && \
-    rm -rf /var/lib/apt/lists/*
+# Install uv system-wide
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh && \
+    mv /root/.cargo/bin/uv /usr/local/bin/uv
 
 # Create a non-root user for security
 RUN useradd -ms /bin/bash dev
@@ -35,9 +34,10 @@ RUN chmod 700 /home/dev/.ssh && \
 # Copy project files
 COPY --chown=dev:dev . .
 
-# Install Python dependencies using uv
+# Install Python dependencies using the system-wide uv
 # This runs as the 'dev' user
-RUN /root/.cargo/bin/uv pip install -r requirements.txt
+RUN uv pip install -r requirements.txt
+
 
 # Expose the SSH port
 EXPOSE 22

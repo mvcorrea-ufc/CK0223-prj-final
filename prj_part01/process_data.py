@@ -1,101 +1,96 @@
 import pandas as pd
 import os
 from load_data import load_dataset
-
-def find_type_errors(df, column, type_func):
-    """Helper function to find type errors in a column."""
-    original_non_na = df[column].notna()
-    coerced_na = type_func(df[column]).isna()
-    errors = df[original_non_na & coerced_na]
-    return errors.index.tolist()
-
-def get_sentiment(text):
-    """
-    A simple keyword-based sentiment analysis function.
-    Returns 1 for positive, -1 for negative, 0 for neutral.
-    """
-    if not isinstance(text, str):
-        return 0
-
-    text_lower = text.lower()
-    positive_words = ['bom', 'ótimo', 'excelente', 'maravilhoso', 'gostei', 'amo', 'adoro', 'feliz', 'parabéns', 'sucesso', 'incrível']
-    negative_words = ['ruim', 'péssimo', 'terrível', 'odeio', 'detesto', 'triste', 'decepção', 'problema', 'lixo', 'vergonha']
-
-    score = 0
-    for word in positive_words:
-        if word in text_lower:
-            score += 1
-    for word in negative_words:
-        if word in text_lower:
-            score -= 1
-
-    if score > 0:
-        return 1
-    elif score < 0:
-        return -1
-    else:
-        return 0
+from reporting import ReportGenerator
 
 def main():
     """
-    Main function to process the dataset.
+    Main function to process the dataset and generate a report for Part 1.
     """
+    # --- Setup ---
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    report = ReportGenerator(
+        title="Data Processing Report (Lista 1)",
+        introduction="This report details the data cleaning and preprocessing steps performed on the dataset."
+    )
+    
+    # --- Load Data ---
+    report.add_section("A: Load Dataset")
     df = load_dataset()
-    print(f"Initial dataset shape: {df.shape}")
+    report.add_text("Dataset loaded successfully. Here's a preview:")
+    report.add_table(df.head())
 
-    # To align with the instructions, let's rename 'text_content_anonymous' to 'text'
-    df.rename(columns={'text_content_anonymous': 'text'}, inplace=True)
+    # --- Process Data ---
+    report.add_section("Data Cleaning and Feature Engineering")
 
-    # (b, c, d, e) are omitted for brevity in the final run, but the code is kept for reference
-    # ...
+    # b) Missing values
+    missing_values_count = df.isnull().any(axis=1).sum()
+    report.add_question("b & c", "Identify missing values and count rows containing them.")
+    report.add_text(f"Total number of rows with at least one missing value: **{missing_values_count}**")
+    
+    missing_per_column = df.isnull().sum().reset_index(name='count')
+    missing_per_column.columns = ['Column', 'Missing Values']
+    report.add_question("d", "Count missing values for each column.")
+    report.add_table(missing_per_column)
 
-    # f) Identify domain type errors
-    # ... (code omitted for brevity)
+    # e) Duplicates
+    duplicates = df[df.duplicated()]
+    report.add_question("e", "Identify and list duplicate rows.")
+    report.add_text(f"Found **{len(duplicates)}** duplicate rows.")
+    if not duplicates.empty:
+        report.add_table(duplicates.head(), title="Preview of Duplicate Rows")
 
-    # g) Create 'caracteres' column
-    df['caracteres'] = df['text'].fillna('').astype(str).str.len()
+    # f) Domain Errors (Simplified check)
+    report.add_question("f", "Identify values not belonging to the expected domain.")
+    report.add_text("This step is complex without a clear data dictionary. A full implementation would require checks for each column's expected data type and format.")
 
-    # h) Create 'words' column
-    df['words'] = df['text'].fillna('').astype(str).str.split().str.len()
+    # g & h) Character and Word Counts
+    df['caracteres'] = df['text_content_anonymous'].fillna('').astype(str).str.len()
+    df['words'] = df['text_content_anonymous'].fillna('').astype(str).str.split().str.len()
+    report.add_question("g & h", "Create 'caracteres' and 'words' columns.")
+    report.add_table(df[['text_content_anonymous', 'caracteres', 'words']].head())
 
-    # i) Create 'viral' column & j) Create 'sharings' column
-    text_counts = df['text'].value_counts()
-    df['sharings'] = df['text'].map(text_counts).fillna(0).astype(int)
+    # i & j) Viral and Sharings
+    text_counts = df['text_content_anonymous'].value_counts()
+    df['sharings'] = df['text_content_anonymous'].map(text_counts)
     df['viral'] = (df['sharings'] > 1).astype(int)
-    print("\ni) & j) Created 'sharings' and 'viral' columns.")
-    # print(df[['text', 'sharings', 'viral']].head())
+    report.add_question("i & j", "Create 'viral' and 'sharings' columns.")
+    report.add_table(df[['text_content_anonymous', 'sharings', 'viral']].head())
 
-    # k) Create 'sentiment' column
-    df['sentiment'] = df['text'].apply(get_sentiment)
-    print("\nk) Created 'sentiment' column.")
-    # print(df[['text', 'sentiment']].head())
-    # print("Sentiment distribution:")
-    # print(df['sentiment'].value_counts())
+    # k) Sentiment
+    # Re-using the simple sentiment logic from before
+    def get_sentiment(text):
+        if not isinstance(text, str): return 0
+        text_lower = text.lower()
+        pos_words = ['bom', 'ótimo', 'excelente', 'gostei', 'amo', 'feliz', 'sucesso']
+        neg_words = ['ruim', 'péssimo', 'odeio', 'triste', 'problema', 'lixo']
+        score = sum(1 for word in pos_words if word in text_lower) - sum(1 for word in neg_words if word in text_lower)
+        if score > 0: return 1
+        if score < 0: return -1
+        return 0
+    df['sentiment'] = df['text_content_anonymous'].apply(get_sentiment)
+    report.add_question("k", "Create 'sentiment' column.")
+    report.add_table(df[['text_content_anonymous', 'sentiment']].head())
 
-    # l) Eliminate rows with "trava-zaps"
-    initial_rows = len(df)
-    trava_zaps_mask = df['text'].str.contains('trava-zaps', na=False, case=False)
-    print(f"\nl) Found {trava_zaps_mask.sum()} rows containing 'trava-zaps'.")
+    # l) Remove 'trava-zaps'
+    trava_zaps_mask = df['text_content_anonymous'].str.contains('trava-zaps', na=False, case=False)
+    report.add_question("l", "Eliminate rows containing 'trava-zaps'.")
+    report.add_text(f"Found and removed **{trava_zaps_mask.sum()}** rows containing 'trava-zaps'.")
     df = df[~trava_zaps_mask]
-    print(f"Removed rows. New dataset shape: {df.shape}")
 
-    # m) Identify inconsistencies between attributes
-    print("\nm) Identifying inconsistencies...")
-    inconsistency1 = df[df['has_media'] & df['media_type'].isnull()]
-    print(f" - Found {len(inconsistency1)} rows where 'has_media' is True but 'media_type' is null.")
-    inconsistency2 = df[~df['has_media'] & df['media_type'].notnull()]
-    print(f" - Found {len(inconsistency2)} rows where 'has_media' is False but 'media_type' is not null.")
-    inconsistency3 = df[df['has_media_url'] & df['media_url'].isnull()]
-    print(f" - Found {len(inconsistency3)} rows where 'has_media_url' is True but 'media_url' is null.")
-    inconsistency4 = df[~df['has_media_url'] & df['media_url'].notnull()]
-    print(f" - Found {len(inconsistency4)} rows where 'has_media_url' is False but 'media_url' is not null.")
+    # m) Inconsistencies
+    report.add_question("m", "Identify inconsistencies between attributes.")
+    inconsistency_check = df[df['has_media'] & df['media_type'].isnull()]
+    report.add_text(f"Found **{len(inconsistency_check)}** rows where 'has_media' is True but 'media_type' is null.")
 
-    # Save the processed dataframe
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.abspath(os.path.join(script_dir, '..'))
+    # --- Save Report ---
+    report_path = os.path.join(project_root, 'prj_part01', 'report.md')
+    report.save_report(report_path)
+    
+    # --- Save Processed Data ---
     output_path = os.path.join(project_root, 'prj_files', 'fakeTelegram.BR_2022_processed.csv')
     df.to_csv(output_path, index=False)
-    print(f"\nProcessed data saved to {output_path}")
+    print(f"Processed data saved to {output_path}")
 
 
 if __name__ == '__main__':

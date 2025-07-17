@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-from prj_part01.download_data import download_and_extract_data
+from download_data import download_and_extract_data
 
 def load_dataset():
     """
