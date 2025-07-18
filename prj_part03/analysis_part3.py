@@ -44,7 +44,7 @@ def main():
 
     report.add_question("b", "Remove 'trava-zaps'.")
     initial_rows_b = len(df)
-    df = df[~df['text'].str.contains('trava-zaps', na=False, case=False)]
+    df = df[~df['text_content_anonymous'].str.contains('trava-zaps', na=False, case=False)]
     report.add_text(f"Removed {initial_rows_b - len(df)} rows containing 'trava-zaps'.")
     
     report.add_question("c", "Remove duplicate rows.")
@@ -300,7 +300,7 @@ def main():
 
     # h.16: As 30 mensagens mais compartilhadas;
     report.add_question("h.16", "Top 30 most shared messages")
-    top_shared_messages = df['text'].value_counts().head(30).reset_index()
+    top_shared_messages = df['text_content_anonymous'].value_counts().head(30).reset_index()
     top_shared_messages.columns = ['Message Text', 'Share Count']
     if not top_shared_messages.empty:
         report.add_table(top_shared_messages, title="Top 30 Shared Messages")
@@ -309,7 +309,7 @@ def main():
 
     # h.17: As 30 mensagens mais compartilhadas em grupos diferentes;
     report.add_question("h.17", "Top 30 messages shared in different groups")
-    messages_in_diff_groups = df.groupby('text')['id_group_anonymous'].nunique().sort_values(ascending=False).head(30).reset_index()
+    messages_in_diff_groups = df.groupby('text_content_anonymous')['id_group_anonymous'].nunique().sort_values(ascending=False).head(30).reset_index()
     messages_in_diff_groups.columns = ['Message Text', 'Unique Group Count']
     if not messages_in_diff_groups.empty:
         report.add_table(messages_in_diff_groups, title="Top 30 Messages in Different Groups")
@@ -318,7 +318,7 @@ def main():
 
     # h.18: Mensagens idênticas compartilhadas pelo mesmo usuário (e suas quantidades);
     report.add_question("h.18", "Identical messages shared by the same user (and their quantities)")
-    identical_messages_same_user = df.groupby(['id_member_anonymous', 'text']).size().reset_index(name='count')
+    identical_messages_same_user = df.groupby(['id_member_anonymous', 'text_content_anonymous']).size().reset_index(name='count')
     identical_messages_same_user = identical_messages_same_user[identical_messages_same_user['count'] > 1].sort_values('count', ascending=False).head(30)
     if not identical_messages_same_user.empty:
         report.add_table(identical_messages_same_user, title="Top 30 Identical Messages by Same User")
@@ -327,7 +327,7 @@ def main():
 
     # h.19: Mensagens idênticas compartilhadas pelo mesmo usuário em grupos distintos (e suas quantidades);
     report.add_question("h.19", "Identical messages shared by the same user in distinct groups (and their quantities)")
-    identical_messages_user_multi_group = df.groupby(['id_member_anonymous', 'text'])['id_group_anonymous'].nunique().reset_index(name='unique_group_count')
+    identical_messages_user_multi_group = df.groupby(['id_member_anonymous', 'text_content_anonymous'])['id_group_anonymous'].nunique().reset_index(name='unique_group_count')
     identical_messages_user_multi_group = identical_messages_user_multi_group[identical_messages_user_multi_group['unique_group_count'] > 1].sort_values('unique_group_count', ascending=False).head(30)
     if not identical_messages_user_multi_group.empty:
         report.add_table(identical_messages_user_multi_group, title="Top 30 Identical Messages by Same User in Different Groups")
@@ -344,14 +344,14 @@ def main():
     # 3. N-gram generation
     
     # Basic Unigram count (without proper stop word removal)
-    all_words = ' '.join(df['text'].dropna().astype(str).str.lower()).split()
+    all_words = ' '.join(df['text_content_anonymous'].dropna().astype(str).str.lower()).split()
     unigram_counts = Counter(all_words).most_common(30)
     report.add_table(pd.DataFrame(unigram_counts, columns=['Unigram', 'Count']), title="Top 30 Unigrams (Basic)")
     report.add_text("Note: A more robust n-gram analysis requires proper stop word removal and tokenization, typically using libraries like NLTK.")
 
     # h.21: As 30 mensagens mais positivas (distintas);
     report.add_question("h.21", "Top 30 distinct positive messages")
-    positive_messages = df[df['sentiment'] == 1]['text'].drop_duplicates().head(30).to_frame()
+    positive_messages = df[df['sentiment'] == 1]['text_content_anonymous'].drop_duplicates().head(30).to_frame()
     if not positive_messages.empty:
         report.add_table(positive_messages, title="Top 30 Distinct Positive Messages")
     else:
@@ -359,7 +359,7 @@ def main():
 
     # h.22: As 30 mensagens mais negativas (distintas);
     report.add_question("h.22", "Top 30 distinct negative messages")
-    negative_messages = df[df['sentiment'] == -1]['text'].drop_duplicates().head(30).to_frame()
+    negative_messages = df[df['sentiment'] == -1]['text_content_anonymous'].drop_duplicates().head(30).to_frame()
     if not negative_messages.empty:
         report.add_table(negative_messages, title="Top 30 Distinct Negative Messages")
     else:
@@ -383,7 +383,7 @@ def main():
 
     # h.25: As 30 maiores mensagens;
     report.add_question("h.25", "Top 30 longest messages")
-    longest_messages = df[['text', 'caracteres']].sort_values('caracteres', ascending=False).head(30)
+    longest_messages = df[['text_content_anonymous', 'caracteres']].sort_values('caracteres', ascending=False).head(30)
     if not longest_messages.empty:
         report.add_table(longest_messages, title="Top 30 Longest Messages")
     else:
@@ -391,7 +391,7 @@ def main():
 
     # h.26: As 30 menores mensagens;
     report.add_question("h.26", "Top 30 shortest messages")
-    shortest_messages = df[df['caracteres'] > 0][['text', 'caracteres']].sort_values('caracteres', ascending=True).head(30)
+    shortest_messages = df[df['caracteres'] > 0][['text_content_anonymous', 'caracteres']].sort_values('caracteres', ascending=True).head(30)
     if not shortest_messages.empty:
         report.add_table(shortest_messages, title="Top 30 Shortest Messages")
     else:
@@ -409,7 +409,7 @@ def main():
 
     # h.28: As mensagens que possuem as palavras “FACÇÃO” e “CRIMINOSA”;
     report.add_question("h.28", "Messages containing 'FACÇÃO' and 'CRIMINOSA'")
-    faccao_criminosa_messages = df[df['text'].str.contains('FACÇÃO', na=False, case=False) & df['text'].str.contains('CRIMINOSA', na=False, case=False)]['text'].head(30).to_frame()
+    faccao_criminosa_messages = df[df['text_content_anonymous'].str.contains('FACÇÃO', na=False, case=False) & df['text_content_anonymous'].str.contains('CRIMINOSA', na=False, case=False)]['text_content_anonymous'].head(30).to_frame()
     if not faccao_criminosa_messages.empty:
         report.add_table(faccao_criminosa_messages, title="Messages with 'FACÇÃO' and 'CRIMINOSA'")
     else:
