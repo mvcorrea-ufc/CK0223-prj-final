@@ -38,7 +38,7 @@ COPY --chown=dev:dev . .
 
 # Install Python dependencies using the system-wide uv
 # This runs as the 'dev' user
-RUN /usr/local/bin/uv pip install -r requirements.txt
+RUN /usr/local/bin/uv pip install --system -r requirements.txt
 
 
 # Expose the SSH port
