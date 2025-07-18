@@ -37,8 +37,12 @@ RUN chmod 700 /home/dev/.ssh && \
 COPY --chown=dev:dev . .
 
 # Install Python dependencies using the system-wide uv
-# This runs as the 'dev' user
+# Switch back to root for system-wide installation
+USER root
 RUN /usr/local/bin/uv pip install --system -r requirements.txt
+
+# Switch back to dev user
+USER dev
 
 
 # Expose the SSH port
