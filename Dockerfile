@@ -9,6 +9,7 @@ ENV UV_HOME=/.uv
 # Install system dependencies, including SSH server
 RUN apt-get update && apt-get install -y --no-install-recommends \
     openssh-server \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Install uv system-wide
